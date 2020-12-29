@@ -21,7 +21,7 @@ Before that, these steps need to be followed to extract e-mails out of entry num
   
 ### Editing the main.py code to your needs
 
-1. On line 12, insert spreadsheet ID (google what it is) of the spreadsheet where all responses are stored.  
+1. On line 12, insert google spreadsheet ID (google what it is) of the spreadsheet where all responses are stored.  
 2. On line 66, insert Sheet name (each sheet has a name).
 3. On line 106, insert your gmail address. Use the same account as the google sheet account.
 
