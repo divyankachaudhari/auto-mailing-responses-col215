@@ -9,7 +9,7 @@ import base64
 
 SCOPES = ['https://mail.google.com/', 'https://www.googleapis.com/auth/drive']
 
-spreadsheet_id = "1KvhduDzY-7gwAchCBjgW6w6GgiAxEZdp_VlhT8wlB5Q"
+spreadsheet_id = "#####SPREADSHEET-ID-HERE######" #SPREADSHEET ID HERE
 message_text = ""
 with open("email.txt", "r") as f:
     message_text = f.read()
@@ -42,19 +42,19 @@ def main():
 def format_data(data):
     data_list = []
     for counter, row in enumerate(data):
-        if (len(row)) < 20:
+        if (len(row)) < 18:
             continue
-        if len(row)>=21:
-            if row[20] == 'Yes': 
+        if len(row)>=19:
+            if row[18] == 'Yes': 
                 continue
 
-        email = row[19]
+        email = row[2]
         if email == '':
             continue
         row_no = counter+2
-        message = message_text.format(mentorname=row[18], name=row[2], email=row[1], mode=row[8], phoneno=row[9], extra=row[13], subjects=row[12], group=row[17], reason=row[7], extradetails=row[14])
-        if len(row) >= 21:
-            row[20] = 'Yes'
+        message = message_text.format(entrynum=row[1], name=row[3], q1=row[4],q2=row[5],q3=row[6],q4=row[7],q5=row[8],q6=row[9],q7=row[10],q8=row[11],q9=row[12],q10=row[13],q11=row[14], q12=row[15],q13=row[16],q14=row[17])
+        if len(row) >= 19:
+            row[18] = 'Yes'
         else:
             row.append('Yes')
         obj = {"email":email, "message": message, "row": row_no, "raw": row}
@@ -63,7 +63,7 @@ def format_data(data):
     return data_list
 
 def get_sheet_data(service):
-    range_sh = "Form Responses 2!A1:10000"
+    range_sh = "#INSERTHERE!A1:10000" #INSERT SHEET NAME IN #INSERTHERE
     result = service.spreadsheets().values().get(
     spreadsheetId=spreadsheet_id, range=range_sh).execute()
     rows = result.get('values', [])
@@ -103,7 +103,7 @@ def send_message(service, user_id, message):
 def send_matching_mails(service_gmail, service_sheets, data_list):
     counter = 0
     for entry in data_list:
-        message = create_message("covedindia@gmail.com", entry["email"], "Coved India: Mentee has been assigned", (entry["message"]))
+        message = create_message("youremail@here.com", entry["email"], "COL215 Minor responses", (entry["message"]))
         result = send_message(service_gmail, 'me', message)
         if result is None:
             print ("Entry {0}: Email could not be sent. Skipping".format(entry["row"]))
