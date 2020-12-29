@@ -9,7 +9,7 @@ import base64
 
 SCOPES = ['https://mail.google.com/', 'https://www.googleapis.com/auth/drive']
 
-spreadsheet_id = "#####SPREADSHEET-ID-HERE######" #SPREADSHEET ID HERE
+spreadsheet_id = "SPREADSHEET-ID-HERE" #SPREADSHEET ID HERE
 message_text = ""
 with open("email.txt", "r") as f:
     message_text = f.read()
@@ -63,7 +63,7 @@ def format_data(data):
     return data_list
 
 def get_sheet_data(service):
-    range_sh = "#INSERTHERE!A1:10000" #INSERT SHEET NAME IN #INSERTHERE
+    range_sh = "INSERTHERE!A1:10000" #INSERT SHEET NAME IN INSERTHERE
     result = service.spreadsheets().values().get(
     spreadsheetId=spreadsheet_id, range=range_sh).execute()
     rows = result.get('values', [])
