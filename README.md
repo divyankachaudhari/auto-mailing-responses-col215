@@ -3,7 +3,7 @@
 
 This repository contains code for auto-mailing any responses from a google sheet. This one in particular caters to COL215 minor response mailing to individual students their responses to the COL215 minor exam.
 
-Note: All the actions need to be done from the same Google account. If you have multiple accounts, you can try doing it in icongnito mode so that you work with only one account at a time. Possibly make a new account for running this. 
+Note: All the actions need to be done from the same Google account. Possibly make a new account for running this. 
 
 Fork this repository and make the changes as given below.
 
