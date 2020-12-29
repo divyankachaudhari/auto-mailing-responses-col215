@@ -112,9 +112,9 @@ def send_matching_mails(service_gmail, service_sheets, data_list):
         if sheet_result is None:
             print ("Entry {0}: Sheet could not be updated. Skipping".format(entry["row"]))
             continue
-        print ("Entry in Row {0} updated and mentor informed".format(entry["row"]))
+        print ("Entry in Row {0} updated and student has been sent the mail.".format(entry["row"]))
         counter+=1
-    print ("Total {0} out of {1} matches have been informed".format(counter, len(data_list)))
+    print ("Total {0} out of {1} students have been informed".format(counter, len(data_list)))
 
 def update_status(service_sheets, entry):
     range_up = "A{0}:W{0}".format(entry["row"])
