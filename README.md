@@ -39,16 +39,16 @@ Run the following pip command to get the Google OAuth library.
 ```
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
-or use pip3 if that's installed instead of pip. 
+or use `pip3` if that's installed instead of `pip`. 
 
 Download the repository and extract it. Go to the location of the folder in the terminal and run the following command after installing the OAuth Google libraries:
 ```
 python main.py
 ```
-or use python3 instead of python if that's installed. 
+or use `python3` instead of `python` if that's installed. 
 
 A window will open where you will have to login to the google account through which you'll mail and where the data is saved in google sheets. After that it will auto update and mail the students. Please do not share the pickle file generated after logging in as it will cause breach of security.
 
-You can change the email text by simply changing email.txt and using the appropriate template tags. I have made a default text file which I feel is approppriate and doesn't need changing. 
+You can change the email text by simply changing email.txt and using the appropriate template tags. I have made a default text file which I feel is appropriate and doesn't need changing. 
 
 I have tried running the code on a sheet while resembles the google form responses we had been given and it works. 
