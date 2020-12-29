@@ -10,6 +10,12 @@ Before that, these steps need to be followed to extract e-mails out of entry num
   3. In the first D cell, if it's D2 write B2&C2 and drag it to the whole column. Now, we got the emails of all the students. 
   4. Copy (Ctrl+C) and paste by value (Ctrl+Shift+V) the e-mails in an 'e-mail column' and re-paste entry numbers from an older sheet in the entry number column. Delete other redundant columns. Now we have time-stamps in A, Entry number in B, E-mail in C, Names in D and all other data in other columns.
   
+### Editing the code
+
+1. On line 12, insert spreadsheet ID (google what it is). 
+2. On line 66, insert Sheet name (each sheet has a name).
+3. On line 106, insert your gmail address. Use the same account as the google sheet account.
+
 ### Usage
 
 Run the following pip command to get the Google OAuth library.
