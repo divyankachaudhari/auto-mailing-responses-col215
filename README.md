@@ -3,6 +3,8 @@
 
 This repository contains code for auto-mailing any responses from a google sheet. This one in particular caters to COL215 minor response mailing to individual students. 
 
+Note: All the actions need to be done from the same Google account. If you have multiple accounts, you can try doing it in icongnito mode so that you work with only one account at a time. For this repository and make the changes as given below.
+
 ### Extracting e-mails from entry number 
 Before that, these steps need to be followed to extract e-mails out of entry numbers:
   1. Make two extra columns (possibly C and D) beside the entry number column (Column B, Column A probably is time-stamp), fill one whole column (Column C) with @iitd.ac.in.  
@@ -15,6 +17,13 @@ Before that, these steps need to be followed to extract e-mails out of entry num
 1. On line 12, insert spreadsheet ID (google what it is). 
 2. On line 66, insert Sheet name (each sheet has a name).
 3. On line 106, insert your gmail address. Use the same account as the google sheet account.
+
+### Google sheets API
+1. Go to https://developers.google.com/sheets/api/quickstart/python.
+2. Click on enable the Google Sheets API.
+3. Continue with default project name and select desktop app and create.
+4. Click on download client configuration. That's your credentials.json file. Upload it to your forked repository.
+
 
 ### Usage
 
