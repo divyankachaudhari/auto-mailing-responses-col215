@@ -19,7 +19,7 @@ Before that, these steps need to be followed to extract e-mails out of entry num
   4. Copy (Ctrl+C) and paste by value (Ctrl+Shift+V) the e-mails in an 'e-mail column' and re-paste entry numbers from an older sheet in the entry number column. Delete other redundant columns. Now we have time-stamps in A, Entry number in B, E-mail in C, Names in D and all other answer data in other columns until column R. Do not leave any column blank. The format must be as mentioned.
  
   
-### Editing the main.py code for your needs
+### Editing the main.py code to your needs
 
 1. On line 12, insert spreadsheet ID (google what it is) of the spreadsheet where all responses are stored.  
 2. On line 66, insert Sheet name (each sheet has a name).
