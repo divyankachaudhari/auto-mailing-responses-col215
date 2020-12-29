@@ -7,6 +7,10 @@ Note: All the actions need to be done from the same Google account. If you have 
 
 Fork this repository and make the changes as given below.
 
+### First
+1. Make sure that all responses are in one Google sheet in the format mentioned below (same format as google forms + e-mail field).
+2. You will use this Google account's GMail to mail students. 
+
 ### Extracting e-mails from entry number 
 Before that, these steps need to be followed to extract e-mails out of entry numbers:
   1. Make two extra columns (possibly C and D) beside the entry number column (Column B, Column A probably is time-stamp), fill one whole column (Column C) with @iitd.ac.in.  
