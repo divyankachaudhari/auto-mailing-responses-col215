@@ -63,7 +63,7 @@ def format_data(data):
     return data_list
 
 def get_sheet_data(service):
-    range_sh = "INSERTHERE!A1:10000" #INSERT SHEET NAME IN INSERTHERE
+    range_sh = "INSERTHERE!A1:10000" #INSERT SHEET NAME IN INSERTHERE, if it's Sheet 1 then the term will be "Sheet 1!A1:10000"
     result = service.spreadsheets().values().get(
     spreadsheetId=spreadsheet_id, range=range_sh).execute()
     rows = result.get('values', [])
@@ -103,7 +103,7 @@ def send_message(service, user_id, message):
 def send_matching_mails(service_gmail, service_sheets, data_list):
     counter = 0
     for entry in data_list:
-        message = create_message("youremail@here.com", entry["email"], "COL215 Minor responses", (entry["message"]))
+        message = create_message("youremail@here.com", entry["email"], "COL215 Minor responses", (entry["message"])) #YOUR E-MAIL ADDRESS 
         result = send_message(service_gmail, 'me', message)
         if result is None:
             print ("Entry {0}: Email could not be sent. Skipping".format(entry["row"]))
