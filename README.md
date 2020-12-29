@@ -30,6 +30,7 @@ Before that, these steps need to be followed to extract e-mails out of entry num
 
 ### Usage
 
+Open terminal.
 Run the following pip command to get the Google OAuth library.
 ```
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
